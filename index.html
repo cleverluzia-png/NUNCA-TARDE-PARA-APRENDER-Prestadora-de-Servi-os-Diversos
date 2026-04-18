@@ -223,37 +223,53 @@
 
     <script>
         let slideIndex = 0;
-        const slides = document.querySelector('.slides');
-        const totalSlides = document.querySelectorAll('.slide').length;
-        const dotsContainer = document.querySelector('.dots');
-        
-        for(let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('span');
-            dot.classList.add('dot');
-            dot.onclick = () => mostrarSlide(i);
-            dotsContainer.appendChild(dot);
-        }
-        
-        function atualizarDots() {
-            document.querySelectorAll('.dot').forEach((dot, index) => {
-                dot.classList.toggle('active', index === slideIndex);
-            });
-        }
-        
-        function mostrarSlide(n) {
-            slideIndex = n;
-            if(slideIndex >= totalSlides) slideIndex = 0;
-            if(slideIndex < 0) slideIndex = totalSlides - 1;
-            slides.style.transform = translateX(${-slideIndex * 100}%);
-            atualizarDots();
-        }
-        
-        function mudarSlide(n) {
-            mostrarSlide(slideIndex + n);
-        }
-        
-        setInterval(() => mudarSlide(1), 4000);
-        mostrarSlide(0);
+    let intervalo;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const dotsContainer = document.querySelector('.dots');
+    
+    // Cria as bolinhas
+    for(let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.addEventListener('click', () => {
+            mostrarSlide(i);
+            reiniciarAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+    }
+    
+    function atualizarDots() {
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === slideIndex);
+        });
+    }
+    
+    function mostrarSlide(n) {
+        slideIndex = n;
+        if(slideIndex >= totalSlides) slideIndex = 0;
+        if(slideIndex < 0) slideIndex = totalSlides - 1;
+        slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        atualizarDots();
+    }
+    
+    function mudarSlide(n) {
+        mostrarSlide(slideIndex + n);
+        reiniciarAutoPlay();
+    }
+    
+    function autoPlay() {
+        mostrarSlide(slideIndex + 1);
+    }
+    
+    function reiniciarAutoPlay() {
+        clearInterval(intervalo);
+        intervalo = setInterval(autoPlay, 4000);
+    }
+    
+    // Inicia o carrossel
+    mostrarSlide(0);
+    reiniciarAutoPlay();
     </script>
 
 </body>
