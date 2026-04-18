@@ -22,20 +22,11 @@
        .btn-green:hover { background: #15803d; transform: translateY(-1px); }
        .btn-outline { background: transparent; color: #2563eb; border: 2px solid #2563eb; }
        .btn-outline:hover { background: #2563eb; color: #fff; }
-
-        /* HERO COM CARROSSEL NO FUNDO - ÚNICA MUDANÇA AQUI */
        .hero { padding: 80px 0; text-align: center; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); position: relative; overflow: hidden; }
-       .hero-carousel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.15; }
-       .hero-slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out; }
-       .hero-slide.active { opacity: 1; }
-       .hero-slide img { width: 100%; height: 100%; object-fit: cover; }
-       .hero.container { position: relative; z-index: 2; }
-        /* FIM DA MUDANÇA DO HERO */
-
        .hero h1 { font-size: 46px; font-weight: 800; margin-bottom: 20px; color: #1e3a8a; }
        .hero p { font-size: 20px; color: #1e40af; max-width: 800px; margin: 0 auto 40px; }
        .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-       .section { padding: 80px 0; }
+       .section { padding: 80px 0; position: relative; overflow: hidden; }
        .section-title { text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 60px; color: #1f2937; }
        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
        .card { background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; transition: all 0.2s; }
@@ -56,6 +47,15 @@
         footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: center; font-size: 14px; }
         footer strong { color: #fff; }
        .notice { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 16px; margin: 20px 0; border-radius: 4px; }
+
+        /* ADIÇÃO: CARROSSEL DE FUNDO - SÓ ISSO FOI ADICIONADO NO CSS */
+       .bg-carousel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.12; pointer-events: none; }
+       .bg-slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out; }
+       .bg-slide.active { opacity: 1; }
+       .bg-slide img { width: 100%; height: 100%; object-fit: cover; }
+       .hero.container,.section.container { position: relative; z-index: 2; }
+        /* FIM DA ADIÇÃO CSS */
+
         @media (max-width: 768px) {
            .hero h1 { font-size: 32px; }
            .logo { font-size: 16px; }
@@ -81,18 +81,18 @@
     </header>
 
     <section class="hero">
-        <!-- CARROSSEL NO FUNDO DA BARRA AZUL - ADICIONADO -->
-        <div class="hero-carousel">
-            <div class="hero-slide active"><img src="img/banner-criacao-sites.jpeg" alt=""></div>
-            <div class="hero-slide"><img src="img/banner-design.jpeg" alt=""></div>
-            <div class="hero-slide"><img src="img/banner-gestao-escolar.jpeg" alt=""></div>
-            <div class="hero-slide"><img src="img/banner-marketing.jpeg" alt=""></div>
-            <div class="hero-slide"><img src="img/banner-restaurante.jpeg" alt=""></div>
-            <div class="hero-slide"><img src="img/banner-suporte.jpeg" alt=""></div>
-            <div class="hero-slide"><img src="img/banner-vendas.jpeg" alt=""></div>
-            <div class="hero-slide"><img src="img/banner-whatsapp.jpeg" alt=""></div>
+        <!-- ADIÇÃO 1: FUNDO DA PÁGINA DO TÍTULO -->
+        <div class="bg-carousel" id="hero-bg">
+            <div class="bg-slide active"><img src="img/banner-criacao-sites.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-design.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-gestao-escolar.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-marketing.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-restaurante.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-suporte.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-vendas.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-whatsapp.jpeg" alt=""></div>
         </div>
-        <!-- FIM DO CARROSSEL ADICIONADO -->
+        <!-- FIM DA ADIÇÃO 1 -->
 
         <div class="container">
             <h1>NUNCA É TARDE PARA APRENDER</h1>
@@ -105,6 +105,19 @@
     </section>
 
     <section id="apps" class="section">
+        <!-- ADIÇÃO 2: FUNDO DA PÁGINA DO CATÁLOGO -->
+        <div class="bg-carousel" id="apps-bg">
+            <div class="bg-slide active"><img src="img/banner-gestao-escolar.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-vendas.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-restaurante.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-suporte.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-criacao-sites.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-design.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-marketing.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-whatsapp.jpeg" alt=""></div>
+        </div>
+        <!-- FIM DA ADIÇÃO 2 -->
+
         <div class="container">
             <h2 class="section-title">Catálogo de Aplicativos</h2>
             <div class="notice">
@@ -149,6 +162,19 @@
     </section>
 
     <section class="section services">
+        <!-- ADIÇÃO 3: FUNDO DA PÁGINA DE OUTROS SERVIÇOS -->
+        <div class="bg-carousel" id="services-bg">
+            <div class="bg-slide active"><img src="img/banner-design.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-criacao-sites.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-suporte.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-marketing.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-whatsapp.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-vendas.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-restaurante.jpeg" alt=""></div>
+            <div class="bg-slide"><img src="img/banner-gestao-escolar.jpeg" alt=""></div>
+        </div>
+        <!-- FIM DA ADIÇÃO 3 -->
+
         <div class="container">
             <h2 class="section-title">Outros Serviços</h2>
             <div class="grid">
@@ -182,8 +208,6 @@
                 <a href="https://wa.me/244945600620" target="_blank">📱 WhatsApp: +244 945 600 620</a>
                 <a href="tel:+244945600620">📞 Ligar: +244 945 600 620</a>
                 <a href="mailto:nuncaetardeparaaprender08@gmail.com">✉️ nuncaetardeparaaprender08@gmail.com</a>
-                <!-- FACEBOOK ADICIONADO -->
-                <a href="https://facebook.com/NuncaETardeParaAprender" target="_blank">📘 Facebook: @Nunca É Tarde Para Aprender</a>
             </div>
         </div>
     </section>
@@ -195,19 +219,26 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DO CARROSSEL LENTO - ADICIONADO NO FINAL -->
+    <!-- ADIÇÃO: SCRIPT DO CARROSSEL - SÓ ISSO FOI ADICIONADO NO FINAL -->
     <script>
-        let heroIndex = 0;
-        const heroSlides = document.querySelectorAll('.hero-slide');
-        const totalHeroSlides = heroSlides.length;
+        function iniciarCarrossel(id) {
+            let index = 0;
+            const slides = document.querySelectorAll('#' + id + '.bg-slide');
+            const total = slides.length;
 
-        function mostrarHeroSlide() {
-            heroSlides.forEach(slide => slide.classList.remove('active'));
-            heroIndex = (heroIndex + 1) % totalHeroSlides;
-            heroSlides[heroIndex].classList.add('active');
+            function proximoSlide() {
+                slides.forEach(s => s.classList.remove('active'));
+                index = (index + 1) % total;
+                slides[index].classList.add('active');
+            }
+
+            setInterval(proximoSlide, 10000);
         }
 
-        setInterval(mostrarHeroSlide, 8000);
+        iniciarCarrossel('hero-bg');
+        iniciarCarrossel('apps-bg');
+        iniciarCarrossel('services-bg');
     </script>
+    <!-- FIM DA ADIÇÃO -->
 </body>
 </html>
