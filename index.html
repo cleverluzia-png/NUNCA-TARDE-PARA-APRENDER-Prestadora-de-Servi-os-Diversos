@@ -4,18 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nunca é Tarde Para Aprender - Prestadora de Serviços Diversos</title>
+<meta name="description" content="Catálogo de aplicativos e serviços. Baixe nossos apps, compre pelo WhatsApp e modernize seu negócio. Suporte técnico dedicado.">
 <link rel="icon" type="image/png" href="logo.png">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial;background:#f8fafc;}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; color: #1a1a1a; background: #f8fafc; }
 
-.container{max-width:1200px;margin:0 auto;padding:0 20px;}
-.hero,.section{position:relative;overflow:hidden;padding:80px 0;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
-.card{background:#fff;padding:30px;border-radius:12px;}
-
-/* ===== CIRCULOS ===== */
+/* ===== NOVO (IMAGENS CIRCULARES) ===== */
 .circle-images{
 position:absolute;
 top:50%;
@@ -23,119 +19,146 @@ transform:translateY(-50%);
 display:flex;
 flex-direction:column;
 gap:15px;
-z-index:5;
+z-index:3;
 }
-
 .circle-left{left:10px;}
 .circle-right{right:10px;}
 
-.circle-images a{
-animation:float 6s ease-in-out infinite;
-}
-
-.circle-images a:nth-child(2){animation-delay:1s;}
-.circle-images a:nth-child(3){animation-delay:2s;}
-.circle-images a:nth-child(4){animation-delay:3s;}
-
 .circle-images img{
-width:65px;
-height:65px;
+width:60px;
+height:60px;
 border-radius:50%;
 object-fit:cover;
 border:3px solid #fff;
-box-shadow:0 8px 18px rgba(0,0,0,0.25);
-transition:0.4s;
+box-shadow:0 6px 12px rgba(0,0,0,0.25);
+animation:float 6s ease-in-out infinite;
+transition:0.3s;
 }
-
-.circle-images img:hover{
-transform:scale(1.2) rotate(6deg);
-}
+.circle-images img:hover{transform:scale(1.15);}
 
 @keyframes float{
 0%,100%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
+50%{transform:translateY(-10px);}
 }
 
 @media(max-width:768px){
 .circle-images{display:none;}
 }
+
+/* ===== RESTO DO TEU CSS ORIGINAL ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+header { background: #fff; border-bottom: 1px solid #e5e5e5; padding: 12px 0; position: sticky; top: 0; z-index: 100; }
+nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.logo { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 800; color: #1e40af; }
+.logo img { width: 45px; height: 45px; border-radius: 8px; object-fit: cover; }
+.nav-contact { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s; cursor: pointer; border: none; text-align: center; }
+.btn-blue { background: #2563eb; color: #fff; }
+.btn-blue:hover { background: #1d4ed8; transform: translateY(-1px); }
+.btn-green { background: #16a34a; color: #fff; }
+.btn-green:hover { background: #15803d; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: #2563eb; border: 2px solid #2563eb; }
+.btn-outline:hover { background: #2563eb; color: #fff; }
+.hero { padding: 80px 0; text-align: center; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); position: relative; overflow: hidden; }
+.hero h1 { font-size: 46px; font-weight: 800; margin-bottom: 20px; color: #1e3a8a; }
+.hero p { font-size: 20px; color: #1e40af; max-width: 800px; margin: 0 auto 40px; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.section { padding: 80px 0; position: relative; overflow: hidden; }
+.section-title { text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 60px; color: #1f2937; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.card { background: #fff; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e5e7eb; transition: all 0.2s; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+.card-icon { width: 50px; height: 50px; background: #dbeafe; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px; }
+.card h3 { font-size: 22px; margin-bottom: 12px; color: #111827; }
+.card p { color: #6b7280; margin-bottom: 20px; }
+.card-badge { display: inline-block; background: #fef3c7; color: #92400e; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }
+.card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.services { background: #fff; }
+.contact-bar { background: #1e3a8a; color: #fff; padding: 60px 0; text-align: center; }
+footer { background: #111827; color: #9ca3af; padding: 40px 0; text-align: center; }
+
+/* ===== CARROSSEL ===== */
+.bg-carousel { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.12; pointer-events: none; }
+.bg-slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 2s ease-in-out; }
+.bg-slide.active { opacity: 1; }
+.bg-slide img { width: 100%; height: 100%; object-fit: cover; }
+
 </style>
 </head>
 
 <body>
 
+<header>...</header>
+
 <!-- HERO -->
 <section class="hero">
 
 <div class="circle-images circle-left">
-<a href="https://wa.me/244945600620"><img src="img/banner-criacao-sites.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-design.jpeg"></a>
+<img src="img/banner-criacao-sites.jpeg">
+<img src="img/banner-design.jpeg">
 </div>
 
 <div class="circle-images circle-right">
-<a href="https://wa.me/244945600620"><img src="img/banner-marketing.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-whatsapp.jpeg"></a>
+<img src="img/banner-marketing.jpeg">
+<img src="img/banner-whatsapp.jpeg">
 </div>
 
-<div class="container">
-<h1>NUNCA É TARDE PARA APRENDER</h1>
-<p>Prestadora de Serviços Diversos.</p>
-</div>
+<!-- TEU CONTEÚDO ORIGINAL CONTINUA -->
+...
 </section>
 
 <!-- APPS -->
-<section class="section">
+<section id="apps" class="section">
 
 <div class="circle-images circle-left">
-<a href="https://wa.me/244945600620"><img src="img/banner-gestao-escolar.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-vendas.jpeg"></a>
+<img src="img/banner-gestao-escolar.jpeg">
+<img src="img/banner-vendas.jpeg">
 </div>
 
 <div class="circle-images circle-right">
-<a href="https://wa.me/244945600620"><img src="img/banner-restaurante.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-suporte.jpeg"></a>
+<img src="img/banner-restaurante.jpeg">
+<img src="img/banner-suporte.jpeg">
 </div>
 
-<div class="container">
-<h2>Catálogo de Aplicativos</h2>
-
-<div class="grid">
-<div class="card"><h3>EduManager Pro</h3></div>
-<div class="card"><h3>LojaFácil Pro</h3></div>
-<div class="card"><h3>MesaCerta</h3></div>
-</div>
-
-</div>
+...
 </section>
 
 <!-- SERVICES -->
-<section class="section">
+<section class="section services">
 
 <div class="circle-images circle-left">
-<a href="https://wa.me/244945600620"><img src="img/banner-design.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-criacao-sites.jpeg"></a>
+<img src="img/banner-design.jpeg">
+<img src="img/banner-criacao-sites.jpeg">
 </div>
 
 <div class="circle-images circle-right">
-<a href="https://wa.me/244945600620"><img src="img/banner-suporte.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-marketing.jpeg"></a>
+<img src="img/banner-suporte.jpeg">
+<img src="img/banner-marketing.jpeg">
 </div>
 
-<div class="container">
-<h2>Outros Serviços</h2>
-
-<div class="grid">
-<div class="card"><h3>Criação de Sites</h3></div>
-<div class="card"><h3>Design Gráfico</h3></div>
-<div class="card"><h3>Suporte Técnico</h3></div>
-</div>
-
-</div>
+...
 </section>
 
-<!-- SCRIPT -->
+<!-- SCRIPT ORIGINAL + EXTRA -->
 <script>
-// ROTAÇÃO AUTOMÁTICA DAS IMAGENS
+function iniciarCarrossel(id) {
+let index = 0;
+const slides = document.querySelectorAll('#' + id + ' .bg-slide');
+const total = slides.length;
+
+function proximoSlide() {
+slides.forEach(s => s.classList.remove('active'));
+index = (index + 1) % total;
+slides[index].classList.add('active');
+}
+setInterval(proximoSlide, 10000);
+}
+
+iniciarCarrossel('hero-bg');
+iniciarCarrossel('apps-bg');
+iniciarCarrossel('services-bg');
+
+/* ROTAÇÃO DAS IMAGENS */
 const imgs=[
 "img/banner-criacao-sites.jpeg",
 "img/banner-design.jpeg",
@@ -149,8 +172,7 @@ const imgs=[
 
 document.querySelectorAll('.circle-images img').forEach((img,i)=>{
 setInterval(()=>{
-let r=Math.floor(Math.random()*imgs.length);
-img.src=imgs[r];
+img.src = imgs[Math.floor(Math.random()*imgs.length)];
 },5000+(i*700));
 });
 </script>
