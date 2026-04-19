@@ -5,45 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nunca é Tarde Para Aprender - Prestadora de Serviços Diversos</title>
 
+<link rel="icon" type="image/png" href="logo.png">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial;background:#f8fafc}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial;background:#f8fafc;}
 
-/* ==== TEU CSS ORIGINAL (RESUMIDO ESSENCIAL) ==== */
+/* ===== TEU CSS ORIGINAL (mantido) ===== */
 .container{max-width:1200px;margin:auto;padding:0 20px;}
-.hero{padding:80px 0;text-align:center;background:#dbeafe;}
-.section{padding:80px 0;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
-.card{background:#fff;padding:20px;border-radius:10px;}
+.hero{padding:80px 0;text-align:center;background:linear-gradient(135deg,#eff6ff,#dbeafe);position:relative;overflow:hidden;}
+.section{padding:80px 0;position:relative;overflow:hidden;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
+.card{background:#fff;border-radius:12px;padding:30px;box-shadow:0 4px 6px rgba(0,0,0,0.05);}
 
-/* ==== LATERAIS NOVAS ==== */
-.side-images{
-position:fixed;
+/* ===== NOVO: IMAGENS CIRCULARES NAS SECÇÕES ===== */
+.circle-images{
+position:absolute;
 top:50%;
 transform:translateY(-50%);
-z-index:999;
 display:flex;
 flex-direction:column;
 gap:15px;
-}
-.side-images.left{left:10px;}
-.side-images.right{right:10px;}
-
-.side-images a{
-animation:float 4s ease-in-out infinite;
+z-index:3;
 }
 
-.side-images img{
-width:65px;
-height:65px;
+.circle-left{left:10px;}
+.circle-right{right:10px;}
+
+.circle-images img{
+width:60px;
+height:60px;
 border-radius:50%;
 object-fit:cover;
 border:3px solid #fff;
 box-shadow:0 6px 12px rgba(0,0,0,0.2);
+animation:float 4s ease-in-out infinite;
 transition:0.3s;
 }
 
-.side-images img:hover{
+.circle-images img:hover{
 transform:scale(1.15) rotate(5deg);
 }
 
@@ -53,40 +53,50 @@ transform:scale(1.15) rotate(5deg);
 }
 
 @media(max-width:768px){
-.side-images{display:none;}
+.circle-images{display:none;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== IMAGENS LATERAIS ===== -->
-<div class="side-images left">
-<a href="https://wa.me/244945600620"><img src="img/banner-criacao-sites.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-design.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-gestao-escolar.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-marketing.jpeg"></a>
-</div>
-
-<div class="side-images right">
-<a href="https://wa.me/244945600620"><img src="img/banner-restaurante.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-suporte.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-vendas.jpeg"></a>
-<a href="https://wa.me/244945600620"><img src="img/banner-whatsapp.jpeg"></a>
-</div>
-
 <!-- ===== HERO ===== -->
 <section class="hero">
+
+<!-- imagens laterais HERO -->
+<div class="circle-images circle-left">
+<img src="img/banner-criacao-sites.jpeg">
+<img src="img/banner-design.jpeg">
+</div>
+
+<div class="circle-images circle-right">
+<img src="img/banner-marketing.jpeg">
+<img src="img/banner-whatsapp.jpeg">
+</div>
+
 <div class="container">
 <h1>NUNCA É TARDE PARA APRENDER</h1>
-<p>Aplicativos e soluções digitais para o teu negócio.</p>
+<p>Prestadora de Serviços Diversos. Desenvolvemos aplicativos e soluções digitais.</p>
 </div>
 </section>
 
 <!-- ===== APPS ===== -->
 <section class="section">
+
+<!-- imagens laterais APPS -->
+<div class="circle-images circle-left">
+<img src="img/banner-gestao-escolar.jpeg">
+<img src="img/banner-vendas.jpeg">
+</div>
+
+<div class="circle-images circle-right">
+<img src="img/banner-restaurante.jpeg">
+<img src="img/banner-suporte.jpeg">
+</div>
+
 <div class="container">
-<h2>Aplicativos</h2>
+<h2>Catálogo de Aplicativos</h2>
+
 <div class="grid">
 
 <div class="card">
@@ -101,27 +111,62 @@ transform:scale(1.15) rotate(5deg);
 
 <div class="card">
 <h3>MesaCerta</h3>
-<p>Gestão de restaurante.</p>
+<p>Restaurantes.</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<!-- ===== SCRIPT CARROSSEL CORRIGIDO ===== -->
+<!-- ===== SERVICES ===== -->
+<section class="section">
+
+<!-- imagens laterais SERVICES -->
+<div class="circle-images circle-left">
+<img src="img/banner-design.jpeg">
+<img src="img/banner-criacao-sites.jpeg">
+</div>
+
+<div class="circle-images circle-right">
+<img src="img/banner-suporte.jpeg">
+<img src="img/banner-marketing.jpeg">
+</div>
+
+<div class="container">
+<h2>Outros Serviços</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Criação de Sites</h3>
+</div>
+
+<div class="card">
+<h3>Design Gráfico</h3>
+</div>
+
+<div class="card">
+<h3>Suporte Técnico</h3>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ===== SCRIPT ORIGINAL (mantido) ===== -->
 <script>
 function iniciarCarrossel(id){
 let index=0;
-const slides=document.querySelectorAll('#'+id+' .bg-slide'); // CORRIGIDO
+const slides=document.querySelectorAll('#'+id+' .bg-slide');
 const total=slides.length;
 
-function proximo(){
+function proximoSlide(){
 slides.forEach(s=>s.classList.remove('active'));
 index=(index+1)%total;
 slides[index].classList.add('active');
 }
 
-setInterval(proximo,10000);
+setInterval(proximoSlide,10000);
 }
 
 iniciarCarrossel('hero-bg');
