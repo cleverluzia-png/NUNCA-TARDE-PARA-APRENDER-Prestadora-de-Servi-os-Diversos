@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+[16:04, 19/04/2026] Clever Luzia: <!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
@@ -15,10 +15,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial;backgr
 .container{max-width:1200px;margin:auto;padding:0 20px;}
 .hero{padding:80px 0;text-align:center;background:linear-gradient(135deg,#eff6ff,#dbeafe);position:relative;overflow:hidden;}
 .section{padding:80px 0;position:relative;overflow:hidden;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
-.card{background:#fff;border-radius:12px;padding:30px;box-shadow:0 4px 6px rgba(0,0,0,0.05);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320…
+[16:28, 19/04/2026] Clever Luzia: <!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nunca é Tarde Para Aprender - Prestadora de Serviços Diversos</title>
+<link rel="icon" type="image/png" href="logo.png">
 
-/* ===== NOVO: IMAGENS CIRCULARES NAS SECÇÕES ===== */
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial;background:#f8fafc;}
+
+.container{max-width:1200px;margin:0 auto;padding:0 20px;}
+.hero,.section{position:relative;overflow:hidden;padding:80px 0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;}
+.card{background:#fff;padding:30px;border-radius:12px;}
+
+/* ===== CIRCULOS ===== */
 .circle-images{
 position:absolute;
 top:50%;
@@ -26,30 +41,37 @@ transform:translateY(-50%);
 display:flex;
 flex-direction:column;
 gap:15px;
-z-index:3;
+z-index:5;
 }
 
 .circle-left{left:10px;}
 .circle-right{right:10px;}
 
+.circle-images a{
+animation:float 6s ease-in-out infinite;
+}
+
+.circle-images a:nth-child(2){animation-delay:1s;}
+.circle-images a:nth-child(3){animation-delay:2s;}
+.circle-images a:nth-child(4){animation-delay:3s;}
+
 .circle-images img{
-width:60px;
-height:60px;
+width:65px;
+height:65px;
 border-radius:50%;
 object-fit:cover;
 border:3px solid #fff;
-box-shadow:0 6px 12px rgba(0,0,0,0.2);
-animation:float 4s ease-in-out infinite;
-transition:0.3s;
+box-shadow:0 8px 18px rgba(0,0,0,0.25);
+transition:0.4s;
 }
 
 .circle-images img:hover{
-transform:scale(1.15) rotate(5deg);
+transform:scale(1.2) rotate(6deg);
 }
 
 @keyframes float{
 0%,100%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
+50%{transform:translateY(-12px);}
 }
 
 @media(max-width:768px){
@@ -60,118 +82,95 @@ transform:scale(1.15) rotate(5deg);
 
 <body>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero">
 
-<!-- imagens laterais HERO -->
 <div class="circle-images circle-left">
-<img src="img/banner-criacao-sites.jpeg">
-<img src="img/banner-design.jpeg">
+<a href="https://wa.me/244945600620"><img src="img/banner-criacao-sites.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-design.jpeg"></a>
 </div>
 
 <div class="circle-images circle-right">
-<img src="img/banner-marketing.jpeg">
-<img src="img/banner-whatsapp.jpeg">
+<a href="https://wa.me/244945600620"><img src="img/banner-marketing.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-whatsapp.jpeg"></a>
 </div>
 
 <div class="container">
 <h1>NUNCA É TARDE PARA APRENDER</h1>
-<p>Prestadora de Serviços Diversos. Desenvolvemos aplicativos e soluções digitais.</p>
+<p>Prestadora de Serviços Diversos.</p>
 </div>
 </section>
 
-<!-- ===== APPS ===== -->
+<!-- APPS -->
 <section class="section">
 
-<!-- imagens laterais APPS -->
 <div class="circle-images circle-left">
-<img src="img/banner-gestao-escolar.jpeg">
-<img src="img/banner-vendas.jpeg">
+<a href="https://wa.me/244945600620"><img src="img/banner-gestao-escolar.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-vendas.jpeg"></a>
 </div>
 
 <div class="circle-images circle-right">
-<img src="img/banner-restaurante.jpeg">
-<img src="img/banner-suporte.jpeg">
+<a href="https://wa.me/244945600620"><img src="img/banner-restaurante.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-suporte.jpeg"></a>
 </div>
 
 <div class="container">
 <h2>Catálogo de Aplicativos</h2>
 
 <div class="grid">
-
-<div class="card">
-<h3>EduManager Pro</h3>
-<p>Gestão escolar completa.</p>
+<div class="card"><h3>EduManager Pro</h3></div>
+<div class="card"><h3>LojaFácil Pro</h3></div>
+<div class="card"><h3>MesaCerta</h3></div>
 </div>
 
-<div class="card">
-<h3>LojaFácil Pro</h3>
-<p>Vendas e stock.</p>
-</div>
-
-<div class="card">
-<h3>MesaCerta</h3>
-<p>Restaurantes.</p>
-</div>
-
-</div>
 </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
+<!-- SERVICES -->
 <section class="section">
 
-<!-- imagens laterais SERVICES -->
 <div class="circle-images circle-left">
-<img src="img/banner-design.jpeg">
-<img src="img/banner-criacao-sites.jpeg">
+<a href="https://wa.me/244945600620"><img src="img/banner-design.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-criacao-sites.jpeg"></a>
 </div>
 
 <div class="circle-images circle-right">
-<img src="img/banner-suporte.jpeg">
-<img src="img/banner-marketing.jpeg">
+<a href="https://wa.me/244945600620"><img src="img/banner-suporte.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-marketing.jpeg"></a>
 </div>
 
 <div class="container">
 <h2>Outros Serviços</h2>
 
 <div class="grid">
-
-<div class="card">
-<h3>Criação de Sites</h3>
+<div class="card"><h3>Criação de Sites</h3></div>
+<div class="card"><h3>Design Gráfico</h3></div>
+<div class="card"><h3>Suporte Técnico</h3></div>
 </div>
 
-<div class="card">
-<h3>Design Gráfico</h3>
-</div>
-
-<div class="card">
-<h3>Suporte Técnico</h3>
-</div>
-
-</div>
 </div>
 </section>
 
-<!-- ===== SCRIPT ORIGINAL (mantido) ===== -->
+<!-- SCRIPT -->
 <script>
-function iniciarCarrossel(id){
-let index=0;
-const slides=document.querySelectorAll('#'+id+' .bg-slide');
-const total=slides.length;
+// ROTAÇÃO AUTOMÁTICA DAS IMAGENS
+const imgs=[
+"img/banner-criacao-sites.jpeg",
+"img/banner-design.jpeg",
+"img/banner-gestao-escolar.jpeg",
+"img/banner-marketing.jpeg",
+"img/banner-restaurante.jpeg",
+"img/banner-suporte.jpeg",
+"img/banner-vendas.jpeg",
+"img/banner-whatsapp.jpeg"
+];
 
-function proximoSlide(){
-slides.forEach(s=>s.classList.remove('active'));
-index=(index+1)%total;
-slides[index].classList.add('active');
-}
-
-setInterval(proximoSlide,10000);
-}
-
-iniciarCarrossel('hero-bg');
-iniciarCarrossel('apps-bg');
-iniciarCarrossel('services-bg');
+document.querySelectorAll('.circle-images img').forEach((img,i)=>{
+setInterval(()=>{
+let r=Math.floor(Math.random()*imgs.length);
+img.src=imgs[r];
+},5000+(i*700));
+});
 </script>
 
 </body>
