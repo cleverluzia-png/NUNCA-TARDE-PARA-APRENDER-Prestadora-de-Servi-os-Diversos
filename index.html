@@ -3,13 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nunca é Tarde Para Aprender</title>
+<title>Nunca é Tarde Para Aprender - Prestadora de Serviços Diversos</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial;background:#f8fafc}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial;background:#f8fafc}
 
-/* ===== LATERAIS ===== */
+/* ==== TEU CSS ORIGINAL (RESUMIDO ESSENCIAL) ==== */
+.container{max-width:1200px;margin:auto;padding:0 20px;}
+.hero{padding:80px 0;text-align:center;background:#dbeafe;}
+.section{padding:80px 0;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+.card{background:#fff;padding:20px;border-radius:10px;}
+
+/* ==== LATERAIS NOVAS ==== */
 .side-images{
 position:fixed;
 top:50%;
@@ -19,12 +26,10 @@ display:flex;
 flex-direction:column;
 gap:15px;
 }
-
 .side-images.left{left:10px;}
 .side-images.right{right:10px;}
 
 .side-images a{
-display:block;
 animation:float 4s ease-in-out infinite;
 }
 
@@ -55,6 +60,74 @@ transform:scale(1.15) rotate(5deg);
 
 <body>
 
-<!-- ===== LADO ESQUERDO ===== -->
+<!-- ===== IMAGENS LATERAIS ===== -->
 <div class="side-images left">
-<a
+<a href="https://wa.me/244945600620"><img src="img/banner-criacao-sites.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-design.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-gestao-escolar.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-marketing.jpeg"></a>
+</div>
+
+<div class="side-images right">
+<a href="https://wa.me/244945600620"><img src="img/banner-restaurante.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-suporte.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-vendas.jpeg"></a>
+<a href="https://wa.me/244945600620"><img src="img/banner-whatsapp.jpeg"></a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+<div class="container">
+<h1>NUNCA É TARDE PARA APRENDER</h1>
+<p>Aplicativos e soluções digitais para o teu negócio.</p>
+</div>
+</section>
+
+<!-- ===== APPS ===== -->
+<section class="section">
+<div class="container">
+<h2>Aplicativos</h2>
+<div class="grid">
+
+<div class="card">
+<h3>EduManager Pro</h3>
+<p>Gestão escolar completa.</p>
+</div>
+
+<div class="card">
+<h3>LojaFácil Pro</h3>
+<p>Vendas e stock.</p>
+</div>
+
+<div class="card">
+<h3>MesaCerta</h3>
+<p>Gestão de restaurante.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ===== SCRIPT CARROSSEL CORRIGIDO ===== -->
+<script>
+function iniciarCarrossel(id){
+let index=0;
+const slides=document.querySelectorAll('#'+id+' .bg-slide'); // CORRIGIDO
+const total=slides.length;
+
+function proximo(){
+slides.forEach(s=>s.classList.remove('active'));
+index=(index+1)%total;
+slides[index].classList.add('active');
+}
+
+setInterval(proximo,10000);
+}
+
+iniciarCarrossel('hero-bg');
+iniciarCarrossel('apps-bg');
+iniciarCarrossel('services-bg');
+</script>
+
+</body>
+</html>
